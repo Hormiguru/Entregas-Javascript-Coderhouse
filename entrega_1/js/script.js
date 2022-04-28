@@ -16,7 +16,7 @@ if(nombre){
 
   alert(buenas + " " + nombre);
   let pass=0
-  let x=0
+  let x=1
   do {
       pass = prompt("escribe tu contraseña");
       if(x===3){
