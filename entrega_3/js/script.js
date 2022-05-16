@@ -1,8 +1,8 @@
 
 
-let nombre = "Vanina"
-let genero = "F"
-let pass = "123"
+let nombre //= "Vanina"
+let genero //= "F"
+let pass //= "123"
 let arrResumen = []
 console.log(nombre + genero + pass)
 // Nombre de la persona
@@ -86,25 +86,15 @@ function categorias(respuesta) {
   if (respuesta === 1) {
     respProducto = parseInt(prompt("Escoge que poducto de Papelería quieres que te muestre: \n 1: Boligrafo \n 2: Goma \n 3: Sacapuntas  \n Para salir cualquier otra cosa"));
     if (respProducto == 1) { respProducto = boligrafo } else if (respProducto == 2) { respProducto = goma } else if (respProducto == 3) { respProducto = sacapuntas }
+
   } else if (respuesta == 2) {
-    respProducto =
-      respuesta +
-      "." +
-      parseInt(
-        prompt(
-          "Escoge que poducto de Cafetería quieres que te muestre: \n 1: Nescafe Clasico 60g \n 2: Cafe Molido Intenso Veracruz, 454g \n 3: Te De Hierbabuena \n Para salir cualquier otra cosa"
-        )
-      );
-    detalleProducto(parseFloat(respProducto));
+    respProducto = parseInt(prompt("Escoge que poducto de Cafetería quieres que te muestre: \n 1: Nescafe Clasico 60g \n 2: Cafe Molido Intenso Veracruz, 454g \n 3: Te De Hierbabuena \n Para salir cualquier otra cosa"));
+    if (respProducto == 1) { respProducto = nescafe } else if (respProducto == 2) { respProducto = cafe_molido } else if (respProducto == 3) { respProducto = te_de_hierbabuena }
+
   } else if (respuesta == 3) {
-    respProducto =
-      respuesta +
-      "." +
-      parseInt(
-        prompt(
-          "Escoge que poducto de Limpieza quieres que te muestre: \n 1: Sanitas\n 2: Papel higienico\n 3: Jabon liquido\n Para salir cualquier otra cosa"
-        )
-      );
+    respProducto = parseInt(prompt("Escoge que poducto de Limpieza quieres que te muestre: \n 1: Sanitas\n 2: Papel higienico\n 3: Jabon liquido\n Para salir cualquier otra cosa"));
+    if (respProducto == 1) { respProducto = sanitas } else if (respProducto == 2) { respProducto = papel_higienico } else if (respProducto == 3) { respProducto = jabon_liquido }
+
   }
   alert(fichaTecnica(respProducto));
   arrResumen.push(respProducto);
